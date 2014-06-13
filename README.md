@@ -23,18 +23,36 @@ npm install -g sleep-server
     -p, --port <port>  Port to run server on (default: 57339)
     -H, --host <host>  Interface to run server on (default: 0.0.0.0)
     -u, --url <url>    URL to trigger sleep (default: sleep)
-    -d, --delay <ms>   Delay in milliseconds (default: 1000)
+    -w, --wait <ms>    Wait in milliseconds before sleeping (default: 3000)
+    -d, --daemonize    Daemonize the sleep server and send output to a file (default: log.txt)
 ```
 
 ### Example
 
+Host A
 ```sh
 $ sleep-server
 Listening for sleep requests at http://0.0.0.0:57339/sleep
+```
+
+Host B
+```sh
+$ curl http://host-a:57339/sleep...
+ok
+```
+
+Host A
+```
 #1:
   Sleeping in 1000ms
   Time: Fri Jun 13 2014 22:32:47 GMT+1000 (EST)
   IP address: 10.0.0.1
+```
+
+Then when you wake the Host A...
+
+Host A
+```
 #2:
   Woke
   Time: Fri Jun 13 2014 22:36:15 GMT+1000 (EST)

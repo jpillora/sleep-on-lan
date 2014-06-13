@@ -33,12 +33,14 @@ program
 if(program.url.charAt(0) !== '/')
   program.url = '/'+program.url;
 
+var msgId = 1;
+
 http.createServer(function (request,response) {
   if(request.url.indexOf(program.url) !== 0)
     return response.end();
 
-  console.log("======\nSleeping in %smn\n  Time: %s\n  IP address: %s",
-              program.delay, new Date(), request.connection.remoteAddress);
+  console.log("#%s:\n  Sleeping in %sms\n  Time: %s\n  IP address: %s",
+              msgId++, program.delay, new Date(), request.connection.remoteAddress);
 
   setTimeout(function() {
     exec(command);
@@ -49,6 +51,6 @@ http.createServer(function (request,response) {
 });
 
 wake(function() {
-  console.log("======\nWoke\n  Time: %s", program.delay, new Date());
+  console.log("#%s:\n  Woke\n  Time: %s", msgId++, new Date());
 });
 

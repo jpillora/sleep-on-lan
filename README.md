@@ -26,6 +26,20 @@ npm install -g sleep-server
     -d, --delay <ms>   Delay in milliseconds (default: 1000)
 ```
 
+### Example
+
+```sh
+$ sleep-server
+Listening for sleep requests at http://0.0.0.0:57339/sleep
+#1:
+  Sleeping in 1000ms
+  Time: Fri Jun 13 2014 22:32:47 GMT+1000 (EST)
+  IP address: 10.0.0.1
+#2:
+  Woke
+  Time: Fri Jun 13 2014 22:36:15 GMT+1000 (EST)
+```
+
 #### MIT License
 
 Copyright &copy; 2014 Jaime Pillora &lt;dev@jpillora.com&gt;

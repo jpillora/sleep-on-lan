@@ -3,9 +3,11 @@ sleep-server
 
 It's easy to wake your computer with [Wake-On-Lan](http://en.wikipedia.org/wiki/Wake-on-LAN)
 
-Now you can send your computer back to sleep via HTTP
+Now you can send your computer back to sleep with HTTP!
 
 ### Install 
+
+[Get Node.js](http://nodejs.org/download/)
 
 ```
 npm install -g sleep-server
@@ -48,10 +50,8 @@ Host A
   Time: Fri Jun 13 2014 22:32:47 GMT+1000 (EST)
   IP address: 10.0.0.1
 ```
+  ... and when you wake the Host A...
 
-Then when you wake the Host A...
-
-Host A
 ```
 #2:
   Woke

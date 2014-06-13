@@ -1,0 +1,12 @@
+{
+  "name": "sleep-server",
+  "version": "0.1.0",
+  "main": "./server",
+  "bin": {
+    "sleep-server": "bin/sleep-server"
+  },
+  "dependencies": {
+    "commander": "^2.2.0",
+    "wake-event": "0.0.1"
+  }
+}

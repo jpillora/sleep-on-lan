@@ -50,7 +50,7 @@ Host A
   Time: Fri Jun 13 2014 22:32:47 GMT+1000 (EST)
   IP address: 10.0.0.1
 ```
-  ... and when you wake the Host A...
+  ... and when it wakes...
 
 ```
 #2:

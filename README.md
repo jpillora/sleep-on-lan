@@ -1,22 +1,22 @@
-sleep-server
+sleep-on-lan
 ============
 
 It's easy to wake your computer with [Wake-On-Lan](http://en.wikipedia.org/wiki/Wake-on-LAN)
 
-Now you can send your computer back to sleep with HTTP!
+Now you can send your computer back to sleep with Sleep-On-Lan!
 
-### Install 
+### Install
 
 [Get Node.js](http://nodejs.org/download/)
 
 ```
-npm install -g sleep-server
+npm install -g sleep-on-lan
 ```
 
 ### Help
 
 ```
-  Usage: sleep-server [options]
+  Usage: sleep-on-lan [options]
 
   Options:
 
@@ -33,8 +33,8 @@ npm install -g sleep-server
 
 Host A
 ```sh
-$ sleep-server
-Listening for sleep requests at http://0.0.0.0:57339/sleep
+$ sleep-on-lan
+Listening at http://0.0.0.0:57339/sleep
 ```
 
 Host B
@@ -56,6 +56,16 @@ Host A
 #2:
   Woke
   Time: Fri Jun 13 2014 22:36:15 GMT+1000 (EST)
+```
+
+#### Run `sleep-on-lan` at startup
+
+```
+$ crontab -e
+# insert the line:
+@reboot sleep-on-lan
+# save and exit
+crontab: installing new crontab
 ```
 
 #### MIT License

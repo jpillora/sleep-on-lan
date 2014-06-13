@@ -13,7 +13,7 @@ switch(os.platform()) {
     break;
   default:
     console.error("Operating system not supported. "+
-      "Please send a pull request to http://github.com/jpillora/sleep-server");
+      "Please send a pull request to http://github.com/jpillora/sleep-on-lan");
     process.exit(1);
 }
 
@@ -64,7 +64,7 @@ http.createServer(function (request,response) {
   }, program.wait);
   response.end('ok');
 }).listen(program.port, function() {
-  console.log('Listening for sleep requests at http://%s:%s%s', program.host, program.port, program.url);
+  console.log('Listening at http://%s:%s%s', program.host, program.port, program.url);
 });
 
 //if interval is late by more than 2secs, assume has just awoken

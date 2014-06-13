@@ -1,10 +1,15 @@
 {
-  "name": "sleep-server",
+  "name": "sleep-on-lan",
   "version": "0.3.2",
   "main": "./server",
   "bin": {
-    "sleep-server": "bin/sleep-server"
+    "sleep-on-lan": "./bin.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://jpillora@github.com/jpillora/sleep-on-lan"
+  },
+  "author": "Jaime Pillora <dev@jpillora.com>",
   "dependencies": {
     "commander": "^2.2.0"
   }

@@ -16,18 +16,24 @@ npm install -g sleep-on-lan
 ### Help
 
 ```
+$ sleep-on-lan --help
+
   Usage: sleep-on-lan [options]
 
   Options:
 
-    -h, --help         output usage information
-    -V, --version      output the version number
-    -p, --port <port>  Port to run server on (default: 57339)
-    -H, --host <host>  Interface to run server on (default: 0.0.0.0)
-    -u, --url <url>    URL to trigger sleep (default: sleep)
-    -w, --wait <ms>    Wait in milliseconds before sleeping (default: 3000)
-    -d, --daemonize    Daemonize the sleep server and send output to a file (default: log.txt)
+    -h, --help              output usage information
+    -V, --version           output the version number
+    -p, --port <port>       Port to run server on (default: 57339)
+    -H, --host <host>       Interface to run server on (default: 0.0.0.0)
+    -u, --url <url>         URL to trigger sleep (default: sleep)
+    -w, --wait <ms>         Wait in milliseconds before sleeping (default: 3000)
+    -d, --daemonize         Daemonize the sleep server
+    -l, --log <file>        Sends output to a logfile
+    -n, --no-periodic-wake  Prevents the system from waking every 2 hours for WOL compatibility (Mac OSX)
 ```
+
+See [this article](http://hints.macworld.com/article.php?story=20100401103451497) for more information on the `--no-periodic-wake` option
 
 ### Example
 
@@ -63,7 +69,7 @@ Host A
 ```
 $ crontab -e
 # insert the line:
-@reboot sleep-on-lan
+@reboot sleep-on-lan -d -l ~/log.txt
 # save and exit
 crontab: installing new crontab
 ```

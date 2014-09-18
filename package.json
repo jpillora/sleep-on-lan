@@ -1,6 +1,6 @@
 {
   "name": "sleep-on-lan",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "main": "./server",
   "bin": {
     "sleep-on-lan": "./bin.js"
